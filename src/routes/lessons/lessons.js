@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const userLevel = localStorage.getItem('level') || 'A1';
+    let userLevel = localStorage.getItem('level') || 'A1';
     let completedLessons = {
         a: JSON.parse(localStorage.getItem('completedLessonsA')) || [],
         b: JSON.parse(localStorage.getItem('completedLessonsB')) || [],
         c: JSON.parse(localStorage.getItem('completedLessonsC')) || []
     };
 
-    
     const phone = localStorage.getItem('Phone');
     if (phone) {
         try {
@@ -19,8 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             const data = await response.json();
-            if (response.ok && data.completed_lessons) {
-                
+            if (response.ok && data.completed_lessons && data.level) {
                 completedLessons = {
                     a: data.completed_lessons.a || [],
                     b: data.completed_lessons.b || [],
@@ -29,9 +27,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 localStorage.setItem('completedLessonsA', JSON.stringify(completedLessons.a));
                 localStorage.setItem('completedLessonsB', JSON.stringify(completedLessons.b));
                 localStorage.setItem('completedLessonsC', JSON.stringify(completedLessons.c));
+                localStorage.setItem('level', data.level);
+                userLevel = data.level;
             }
         } catch (error) {
-            console.error('Ошибка при загрузке завершённых уроков:', error);
+            console.error('Ошибка при загрузке завершённых уроков и уровня:', error);
         }
     }
 
