@@ -1,0 +1,322 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding-top: 50px; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.lessons-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    width: 350px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.lessons-card:hover {
+    transform: translateY(-5px);
+}
+
+.lessons-card h2 {
+    margin: 0 0 20px;
+    color: #1a237e;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.level-section {
+    margin-bottom: 20px;
+}
+
+.level-section h3 {
+    color: #37474f;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.level-section.locked {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #42a5f5, #1976d2);
+    transition: width 0.5s ease;
+}
+
+.lesson-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lesson-item:hover:not(.locked) {
+    background: #e3f2fd;
+    transform: translateX(5px);
+}
+
+.lesson-item.locked {
+    background: #eceff1;
+    opacity: 0.7;
+}
+
+.lesson-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lesson-icon {
+    color: #1976d2;
+    font-size: 20px;
+}
+
+.lesson-name {
+    font-weight: 600;
+    color: #37474f;
+    font-size: 16px;
+}
+
+.lesson-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #42a5f5, #1976d2);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.lesson-button:hover:not(:disabled) {
+    background: linear-gradient(to right, #1976d2, #42a5f5);
+    transform: scale(1.05);
+}
+
+.lesson-button:disabled {
+    background: #b0bec5;
+    cursor: not-allowed;
+}
+
+.lesson-button.completed {
+    background: linear-gradient(to right, #4caf50, #81c784);
+}
+
+.completion-message {
+    display: none;
+    color: #2e7d32;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+.completion-message.active {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.completion-message .fa-trophy {
+    color: #fbc02d;
+    font-size: 24px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: #1a237e;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.modal-content p {
+    color: #455a64;
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
+.subscribe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #42a5f5, #1976d2);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.subscribe-button:hover {
+    background: linear-gradient(to right, #1976d2, #42a5f5);
+    transform: scale(1.05);
+}
+
+.close-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #b0bec5;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.close-button:hover {
+    background: #90a4ae;
+    transform: scale(1.05);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 46px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .lessons-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .lessons-card h2 {
+        font-size: 20px;
+    }
+
+    .level-section h3 {
+        font-size: 18px;
+    }
+
+    .lesson-item {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .lesson-name {
+        font-size: 14px;
+    }
+
+    .lesson-icon {
+        font-size: 18px;
+    }
+
+    .lesson-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .progress-bar {
+        height: 8px;
+    }
+
+    .completion-message {
+        font-size: 16px;
+    }
+
+    .modal {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .modal-content h3 {
+        font-size: 18px;
+    }
+
+    .modal-content p {
+        font-size: 12px;
+    }
+
+    .subscribe-button, .close-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .lessons-card {
+        margin-top: 10px;
+    }
+
+    .lesson-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .lesson-button {
+        width: 100%;
+    }
+}
