@@ -1,0 +1,297 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    padding-top: 50px; 
+}
+
+.gif-hero {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    background: linear-gradient(to right, #3b82f6, #1e40af);
+}
+
+.hero-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    color: #1e40af;
+}
+
+.cta-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.cta-section p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    margin-left: 10px;
+    background-color: #f59e0b;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    text-decoration: none;
+}
+
+.action-button {
+    background-color: #f59e0b;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 0.67rem 1.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    margin: 1rem 0;
+}
+
+.action-button:hover {
+    background-color: #d97706;
+    transform: scale(1.05);
+}
+
+.cta-button:hover {
+    background-color: #d97706;
+    transform: scale(1.05);
+}
+
+.cta-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.features {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #e5e7eb;
+}
+
+.features h2 {
+    font-size: 1.75rem;
+    color: #1e40af;
+    margin-bottom: 1.5rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.feature-card h3 {
+    color: #1e40af;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+}
+
+.blur {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.blur.active {
+    display: block;
+}
+
+.result-container {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.owl-mascot {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 46px;
+    }
+
+    .gif-hero {
+        height: 35vh;
+    }
+
+    .cta-section {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .cta-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .cta-section p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .action-button {
+        padding: 0.45rem 1.2rem;
+    }
+
+    .cta-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        border-radius: 1.2rem;
+    }
+
+    .features {
+        padding: 2rem 0.75rem;
+    }
+
+    .features h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 90%;
+    }
+
+    .feature-card {
+        padding: 0.75rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.85rem;
+    }
+
+    .result-container {
+        margin: 1.5rem auto;
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .owl-mascot {
+        width: 80px;
+    }
+
+    .result-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .result-container p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .gif-hero {
+        height: 30vh;
+    }
+
+    .cta-section {
+        padding: 1rem 0.5rem;
+    }
+
+    .cta-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .cta-section p {
+        font-size: 0.85rem;
+    }
+
+    .action-button {
+        width: 100%;
+        padding: 0.35rem 1rem;
+    }
+
+    .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .features {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .features h2 {
+        font-size: 1.25rem;
+    }
+
+    .feature-card {
+        padding: 0.5rem;
+    }
+
+    .feature-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .feature-card p {
+        font-size: 0.8rem;
+    }
+
+    .result-container {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .owl-mascot {
+        width: 70px;
+    }
+
+    .result-container h2 {
+        font-size: 1.25rem;
+    }
+
+    .result-container p {
+        font-size: 0.85rem;
+    }
+}

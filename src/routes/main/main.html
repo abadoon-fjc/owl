@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Learn English with Owl</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./test/test.css">
+    <link rel="stylesheet" href="../../cmp/footer/footer.css">
+    <link rel="stylesheet" href="../../cmp/reg/reg.css">
+    <link rel="stylesheet" href="../../cmp/notification/notification.css">
+    <link rel="stylesheet" href="../../cmp/header/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div id="header-menu-container"></div>
+
+    <section id="home" class="section active">
+        <div class="gif-hero">
+            <img src="https://usagif.com/wp-content/uploads/gifs/british-flag-1.gif" alt="English Learning GIF" class="hero-gif">
+        </div>
+        <div class="cta-section">
+            <h1>Learn English with Owl!</h1>
+            <p>Fun, interactive lessons to master English at your own pace.</p>
+            <button onclick="startTest()" class="cta-button">Start Placement Test</button>
+        </div>
+        <div class="features">
+            <h2>Why Learn with Us?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Gamified Lessons</h3>
+                    <p>Earn points, unlock levels, and stay motivated!</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Personalized Plan</h3>
+                    <p>Lessons tailored to your level and goals.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Interactive Practice</h3>
+                    <p>Practice speaking, listening, and writing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="test" class="section">
+        <div class="test-container">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <h2 id="question-number">Question 1 of 10</h2>
+            <p id="question-text"></p>
+            <div id="options" class="options"></div>
+        </div>
+    </section>
+
+    <section id="result" class="section">
+        <div class="result-container">
+            <img src="../../../assets/god.png" alt="Owl Mascot" class="owl-mascot">
+            <h2 id="result-level">Your Level: </h2>
+            <p id="after-phrase"></p>
+            <button class="cta-button"><a href="../lessons/lessons.html">Start Learning Now</a></button>
+        </div>
+    </section>
+
+    <div id="reg-modal"></div>
+
+    <script src="../../cmp/header/header.js"></script>
+    <script src="../../cmp/footer/footer.js"></script>
+    <script src="../../cmp/reg/reg.js"></script>
+    <script src="../../cmp/notification/notification.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.notification {
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    z-index: 1000;
+    opacity: 0;
+    text-align: center;
+    width: auto;
+    max-width: 1000vw;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 16px;
+    transition: top 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.notification.show {
+    top: 20px;
+    opacity: 1;
+}

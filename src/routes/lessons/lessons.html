@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Уроки</title>
+    <link rel="stylesheet" href="lessons.css">
+    <link rel="stylesheet" href="../../cmp/header/header.css">
+    <link rel="stylesheet" href="../../cmp/footer/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div id="header-menu-container"></div>
+
+    <main class="container">
+        <div class="lessons-card">
+            <h2>Ваше путешествие по обучению</h2>
+            <div class="level-section" id="level-a">
+                <h3>Уровень A</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill-a"></div>
+                </div>
+                <div class="lesson-item" id="lesson-a-1">
+                    <div class="lesson-info">
+                        <i class="fas fa-book lesson-icon"></i>
+                        <span class="lesson-name">Урок 1: Базовый словарь</span>
+                    </div>
+                    <button class="lesson-button" data-level="a" data-lesson="1">Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-a-2">
+                    <div class="lesson-info">
+                        <i class="fas fa-comment lesson-icon"></i>
+                        <span class="lesson-name">Урок 2: Прошедшее, настоящее и будущее время</span>
+                    </div>
+                    <button class="lesson-button" data-level="a" data-lesson="2" disabled>Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-a-3">
+                    <div class="lesson-info">
+                        <i class="fas fa-pen lesson-icon"></i>
+                        <span class="lesson-name">Урок 3: Глагол to be</span>
+                    </div>
+                    <button class="lesson-button" data-level="a" data-lesson="3" disabled>Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-a-4">
+                    <div class="lesson-info">
+                        <i class="fas fa-book-open lesson-icon"></i>
+                        <span class="lesson-name">Урок 4: Модальные глаголы</span>
+                    </div>
+                    <button class="lesson-button" data-level="a" data-lesson="4" disabled>Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-a-5">
+                    <div class="lesson-info">
+                        <i class="fas fa-microphone lesson-icon"></i>
+                        <span class="lesson-name">Урок 5: Разговорные навыки</span>
+                    </div>
+                    <button class="lesson-button" data-level="a" data-lesson="5" disabled>Начать</button>
+                </div>
+            </div>
+            <div class="level-section locked" id="level-b">
+                <h3>Уровень B</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill-b"></div>
+                </div>
+                <div class="lesson-item" id="lesson-b-1">
+                    <div class="lesson-info">
+                        <i class="fas fa-book lesson-icon"></i>
+                        <span class="lesson-name">Урок 1: Present, Past и Future Continuous</span>
+                    </div>
+                    <button class="lesson-button" data-level="b" data-lesson="1">Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-b-2">
+                    <div class="lesson-info">
+                        <i class="fas fa-comment lesson-icon"></i>
+                        <span class="lesson-name">Урок 2: Present, Past и Future Perfect Continuous</span>
+                    </div>
+                    <button class="lesson-button" data-level="b" data-lesson="2" disabled>Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-b-3">
+                    <div class="lesson-info">
+                        <i class="fas fa-pen lesson-icon"></i>
+                        <span class="lesson-name">Урок 3: Relative Clauses (Defining & Non-Defining)</span>
+                    </div>
+                    <button class="lesson-button" data-level="b" data-lesson="3" disabled>Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-b-4">
+                    <div class="lesson-info">
+                        <i class="fas fa-book-open lesson-icon"></i>
+                        <span class="lesson-name">Урок 4: Articles & Quantifiers</span>
+                    </div>
+                    <button class="lesson-button" data-level="b" data-lesson="4" disabled>Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-b-5">
+                    <div class="lesson-info">
+                        <i class="fas fa-microphone lesson-icon"></i>
+                        <span class="lesson-name">Урок 5: Conjunctions</span>
+                    </div>
+                    <button class="lesson-button" data-level="b" data-lesson="5" disabled>Начать</button>
+                </div>
+            </div>
+            <div class="level-section locked" id="level-c">
+                <h3>Уровень C</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill-c"></div>
+                </div>
+                <div class="lesson-item" id="lesson-c-1">
+                    <div class="lesson-info">
+                        <i class="fas fa-book lesson-icon"></i>
+                        <span class="lesson-name">Урок 1: Смешанные условные предложения</span>
+                    </div>
+                    <button class="lesson-button" data-level="c" data-lesson="1">Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-c-2">
+                    <div class="lesson-info">
+                        <i class="fas fa-comment lesson-icon"></i>
+                        <span class="lesson-name">Урок 2: Инверсия</span>
+                    </div>
+                    <button class="lesson-button" data-level="c" data-lesson="2" disabled>Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-c-3">
+                    <div class="lesson-info">
+                        <i class="fas fa-pen lesson-icon"></i>
+                        <span class="lesson-name">Урок 3: Обороты с Get и Have</span>
+                    </div>
+                    <button class="lesson-button" data-level="c" data-lesson="3" disabled>Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-c-4">
+                    <div class="lesson-info">
+                        <i class="fas fa-book-open lesson-icon"></i>
+                        <span class="lesson-name">Урок 4: Future in the Past</span>
+                    </div>
+                    <button class="lesson-button" data-level="c" data-lesson="4" disabled>Начать</button>
+                </div>
+                <div class="lesson-item locked" id="lesson-c-5">
+                    <div class="lesson-info">
+                        <i class="fas fa-microphone lesson-icon"></i>
+                        <span class="lesson-name">Урок 5: Wishes and Regrets</span>
+                    </div>
+                    <button class="lesson-button" data-level="c" data-lesson="5" disabled>Начать</button>
+                </div>
+            </div>
+        </div>
+        <div class="completion-message" id="completion-message">
+            <i class="fas fa-trophy"></i> Поздравляем! Вы завершили доступные уроки!
+        </div>
+        <div class="modal" id="subscription-modal" style="display: none;">
+            <div class="modal-content">
+                <h3>Уроки завершены!</h3>
+                <p>Поздравляем с завершением доступных уроков! Чтобы продолжить обучение и получить доступ к новым урокам, оформите подписку.</p>
+                <a href="https://x.ai/grok" class="subscribe-button">Оформить подписку</a>
+                <button class="close-button" id="close-modal">Закрыть</button>
+            </div>
+        </div>
+        <div class="modal-overlay" id="modal-overlay" style="display: none;"></div>
+    </main>
+
+    <footer id="footer" class="footer"></footer>
+
+    <script src="../../cmp/header/header.js"></script>
+    <script src="../../cmp/footer/footer.js"></script>
+    <script src="lessons.js"></script>
+</body>
+</html>

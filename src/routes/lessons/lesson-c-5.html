@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Урок C-5: Wishes and Regrets</title>
+    <link rel="stylesheet" href="./lesson-style.css">
+    <link rel="stylesheet" href="../../cmp/header/header.css">
+    <link rel="stylesheet" href="../../cmp/footer/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div id="header-menu-container"></div>
+    <main class="container">
+        <div class="lesson-card">
+            <a href="./lessons.html" class="close-lesson-btn">←</a>
+            <h2><i class="fas fa-microphone lesson-icon"></i> Урок 5: Wishes and Regrets</h2>
+            <section class="theory">
+                <h3>Теория</h3>
+                <p>В этом уроке вы изучите конструкции для выражения желаний (Wishes) и сожалений (Regrets) в английском языке, которые используются для обсуждения гипотетических ситуаций или прошлых ошибок.</p>
+                <ul>
+                    <li><strong>Wishes about the Present/Future</strong>: Используется <em>wish + Past Simple</em> для желаний о настоящем или будущем. Пример: "I wish I knew her name."</li>
+                    <li><strong>Wishes about the Past</strong>: Используется <em>wish + Past Perfect</em> для сожалений о прошлом. Пример: "I wish I had studied harder."</li>
+                    <li><strong>Regrets with Should Have</strong>: Указывает на действия, которые следовало бы сделать в прошлом. Пример: "I should have called her yesterday."</li>
+                </ul>
+            </section>
+            <section class="video">
+                <h3>Видеоурок</h3>
+                <div class="video-wrapper">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/0M8M7f-63oM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="exercise">
+                <h3>Практическое задание</h3>
+                <p>Выберите правильную конструкцию для предложения: "I ______ I had taken that job offer last year."</p>
+                <div class="options">
+                    <label><input type="radio" name="answer" value="wish"> wish</label>
+                    <label><input type="radio" name="answer" value="wished"> wished</label>
+                    <label><input type="radio" name="answer" value="should have"> should have</label>
+                </div>
+                <button class="submit-button" id="submit-button">Проверить</button>
+                <div class="feedback" id="feedback"></div>
+            </section>
+        </div>
+        <div class="modal" id="completion-modal" style="display: none;">
+            <div class="modal-content">
+                <h3>Поздравляем!</h3>
+                <p>Вы успешно завершили весь курс английского языка! Отличная работа!</p>
+                <button class="close-button" id="close-modal">Закрыть</button>
+            </div>
+        </div>
+        <div class="modal-overlay" id="modal-overlay" style="display: none;"></div>
+    </main>
+    <footer id="footer" class="footer"></footer>
+    <script src="../../cmp/header/header.js"></script>
+    <script src="../../cmp/footer/footer.js"></script>
+    <script src="./lesson-c-5.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="../../cmp/header/header.css">
+    <link rel="stylesheet" href="../../cmp/footer/footer.css">
+    <link rel="stylesheet" href="../../cmp/reg/reg.css">
+    <link rel="stylesheet" href="../../cmp/notification/notification.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-menu-container"></div>
+
+    <main class="container">
+        <div class="spinner" id="spinner"></div>
+        <div class="profile-card" id="profile-card" style="display: none;">
+            <h2>User Profile</h2>
+            <div class="profile-field">
+                <span class="label">Nickname:</span>
+                <span class="value" id="nickname"></span>
+            </div>
+            <div class="profile-field">
+                <span class="label">Phone:</span>
+                <span class="value" id="phone"></span>
+            </div>
+            <div class="profile-field">
+                <span class="label">Level:</span>
+                <span class="value" id="level"></span>
+            </div>
+            <div class="profile-field">
+                <span class="label">Email:</span>
+                <span class="value" id="email"></span>
+            </div>
+            <div class="profile-field">
+                <span class="label">Created At:</span>
+                <span class="value" id="created_at"></span>
+            </div>
+            <button class="lessons-button" id="lessons-button">Go to Lessons</button>
+        </div>
+        <div class="error-message" id="error-message" style="display: none;"></div>
+    </main>
+
+    <footer id="footer" class="footer"></footer>
+
+    <div id="reg-modal"></div>
+
+    <script src="../../cmp/reg/reg.js"></script>
+    <script src="./profile.js"></script>
+    <script src="../../cmp/footer/footer.js"></script>
+    <script src="../../cmp/header/header.js"></script>
+    <script src="../../cmp/notification/notification.js"></script>
+</body>
+</html>

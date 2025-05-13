@@ -1,0 +1,63 @@
+.footer {
+    background-color: #1e40af;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-logo .owl-icon {
+    width: 20vw;
+    height: auto;
+}
+
+.footer-slogan {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f59e0b;
+    margin: 0.5rem 0;
+}
+
+.footer-contacts p {
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+}
+
+.footer-contacts a {
+    color: #f59e0b;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-contacts a:hover {
+    color: #d97706;
+}
+
+@media (max-width: 640px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo .owl-icon {
+        width: 20vw;
+        height: auto;
+    }
+
+    .footer-slogan {
+        font-size: 0.85rem;
+    }
+
+    .footer-contacts p {
+        font-size: 0.8rem;
+    }
+}
